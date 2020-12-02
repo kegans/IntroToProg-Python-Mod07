@@ -29,7 +29,7 @@ The last keyword he covers is finally, which is a block with the last actions to
 The last source I reviewed was the Built-In Exceptions page in the Python Standard Library. (Python Standard Library, https://docs.python.org/3/library/exceptions.html#bltin-exceptions, 2020) (External Site). 
 It describes exceptions in high-level terms, but lists all built-in exceptions that can be used for specific error handling (Figure 1).
 
-![Python Error Handling](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/pythonexceptions.PNG "Python Error Handling")
+![Python Error Handling](pictures/pythonexceptions.PNG "Python Error Handling")
 #### Figure 1. Python Built-In Exception Descriptions
 
 ### Pickling
