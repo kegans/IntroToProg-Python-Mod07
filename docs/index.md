@@ -45,7 +45,7 @@ He ends his video by noting that pickling is useful when you’ve read some data
 As always, going to the original source is good for reference material and to get an overview of what’s available, which is why I also took a look at The Python Standard Library page on the pickle module (The Python Standard Library, https://docs.python.org/3/library/pickle.html?highlight=pickle#module-pickle, 2020)(External Site).
 In his YouTube video, Mark Jay calls attention to the Python Standard Library page for pickling when he notes that it’s possible to pickle a harmful virus and to become vulnerable to an attack if you unpickle data from an untrusted or unauthenticated source (Figure 2). As a guideline, he suggests only pickling data that you generate or which you’re certain was generated safely.
 
-![Python Pickle Module Warning](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/picklewarning.PNG "Python Pickle Module Warning")
+![Python Pickle Module Warning](pictures/picklewarning.PNG "Python Pickle Module Warning")
 #### Figure 2: Python Standard Library - Pickle Module Warning
 
 ## Creating the Program
@@ -148,7 +148,7 @@ finally:
 
 When I tested this block in PyCharm, I saw my error message and the built-in Python error info that I had saved and printed (Figure 7).
 
-![Exception Error-Handling Files](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/exceptionerror-files.PNG "Exception Error-Handling Files")
+![Exception Error-Handling Files](pictures/exceptionerror-files.PNG "Exception Error-Handling Files")
 
 #### Figure 7: Exception Handling – Handling a File Test
 
@@ -167,7 +167,7 @@ elif x == 0:  # Raises an error if the user enters a zero
 
 When I tested this code, I provided a 0 and a -1, and received each error that I had specified (Figure 8).
 Pickling Demo
-![Exception Error-Raising Error](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/exceptionerror-raise.PNG "Exception Error-Raising Error")
+![Exception Error-Raising Error](pictures/exceptionerror-raise.PNG "Exception Error-Raising Error")
 #### Figure 8: Exception Handling – Raising an Error Test
 
 ### Pickling Demo
@@ -194,7 +194,7 @@ with open('dataPick.pkl', 'rb') as pickleFile:  # Opens a file for reading binar
 
 I tested this demo code in PyCharm and saw that all of my dictionary data displayed (Figure 10).
 
-![Pickling-Writing and Reading](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/pickling-test.PNG "Pickling-Writing and Reading")
+![Pickling-Writing and Reading](pictures/pickling-test.PNG "Pickling-Writing and Reading")
 #### Figure 10: Pickling – Writing and Reading Binary Data to a File Test
 
 ## Testing
@@ -203,11 +203,11 @@ When I began creating this program, I completed all coding and testing primarily
 ### Command Terminal
 I opened a command terminal, changed the directory to my assignment folder, and ran portions of my Assignment07.py script file. I received the desired output here, as well (Figure 11).
 
-![Command Testing](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/exceptionspickling-command.PNG "Command Testing")
+![Command Testing](pictures/exceptionspickling-command.PNG "Command Testing")
 #### Figure 10: Command Terminal Testing
 
 Finally, I checked that the text document was saved in my assignment folder (Figure 12).
-![Pickling File](https://github.com/kegans/IntroToProg-Python-Mod07/blob/main/docs/pictures/pickle-file.PNG "Pickling File")
+![Pickling File](pictures/pickle-file.PNG "Pickling File")
 
 #### Figure 12: Verifying Data File Exists
 
