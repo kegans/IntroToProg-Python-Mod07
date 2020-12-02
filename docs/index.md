@@ -30,7 +30,7 @@ The last source I reviewed was the Built-In Exceptions page in the Python Standa
 It describes exceptions in high-level terms, but lists all built-in exceptions that can be used for specific error handling (Figure 1).
 
 ![Python Error Handling](pictures/pythonexceptions.PNG "Python Error Handling")
-#### Figure 1. Python Built-In Exception Descriptions
+##### Figure 1. Python Built-In Exception Descriptions
 
 ### Pickling
 After exception handling, the next topic I researched was pickling. I found less sources on this topic, but the ones I did find provided a good overview of the topic.
@@ -46,7 +46,7 @@ As always, going to the original source is good for reference material and to ge
 In his YouTube video, Mark Jay calls attention to the Python Standard Library page for pickling when he notes that it’s possible to pickle a harmful virus and to become vulnerable to an attack if you unpickle data from an untrusted or unauthenticated source (Figure 2). As a guideline, he suggests only pickling data that you generate or which you’re certain was generated safely.
 
 ![Python Pickle Module Warning](pictures/picklewarning.PNG "Python Pickle Module Warning")
-#### Figure 2: Python Standard Library - Pickle Module Warning
+##### Figure 2: Python Standard Library - Pickle Module Warning
 
 ## Creating the Program
 
@@ -79,7 +79,7 @@ except Exception as e:  # Handles all other error types and provides details
     print("Built-in Python error info:")
     print(e, e.__doc__, type(e), sep='\n')task
 ```
-#### Figure 3: Exception Handling – Error Types 
+##### Figure 3: Exception Handling – Error Types 
 
 #### Else
 To demonstrate the else keyword, I started with code from the previous demo and added an else statement at the end to display the results of my mathematical operations and a message communicating that no errors had occurred. (Figure 4).
@@ -102,7 +102,7 @@ else:  # Displays results and message if user input does not generate an error
     print("Divided: ", divide)
     print("No errors occurred.")
 ```
-#### Figure 4: Exception Handling – Else 
+##### Figure 4: Exception Handling – Else 
 
 #### Pass and Finally
 With pass and finally, I once again began with code from the previous two demos, but include a pass at the end of the exception block and a finally at the end of the entire try-except. Finally, I moved the code that displayed my mathematical operations to the end of the program to show that it would still execute after errors with the pass keyword present (Figure 5). 
@@ -128,7 +128,7 @@ print("Added: ", add)
 print("Subtracted: ", subtract)
 print("Divided: ", divide)
 ````
-#### Figure 5: Exception Handling – Pass and Finally
+##### Figure 5: Exception Handling – Pass and Finally
 
 #### Handling a File
 I thought it was important to include a demonstration of handling a file with the finally keyword, which W3Schools mentioned was useful for closing objects and cleaning up resources. I started with a try block that opens a file to write in binary data and attempted to write a string to it. This generates a TypeError because a bytes-like object is required, so the error is handled in the except block and the finally block closes the file object and continues the program (Figure 6).
@@ -144,16 +144,16 @@ except Exception as e:
 finally:
     objFile.close()  # Closes the file object and continues the program
 ````
-#### Figure 6: Exception Handling – Handling a File
+##### Figure 6: Exception Handling – Handling a File
 
 When I tested this block in PyCharm, I saw my error message and the built-in Python error info that I had saved and printed (Figure 7).
 
 ![Exception Error-Handling Files](pictures/exceptionerror-files.PNG "Exception Error-Handling Files")
 
-#### Figure 7: Exception Handling – Handling a File Test
+##### Figure 7: Exception Handling – Handling a File Test
 
 #### Raising an Error
-The final exception handling demonstration involved showing how to raise an error. I kept this last demo simple by requesting one variable from the user and raising two errors if the number they provided was less than zero, a ValueError, or equal to zero, a ZeroDivisionError (Figure 7).
+The final exception handling demonstration involved showing how to raise an error. I kept this last demo simple by requesting one variable from the user and raising two errors if the number they provided was less than zero, a ValueError, or equal to zero, a ZeroDivisionError (Figure 8).
 ```
 # ----- Raising an Error:
 x = int(input("Please enter a number: "))
@@ -163,16 +163,16 @@ if x < 0:  # Raises an error if the user enters a negative number
 elif x == 0:  # Raises an error if the user enters a zero
     raise ZeroDivisionError("Please do not enter a zero.") 
 ```
-#### Figure 7: Exception Handling – Raising an Error
+##### Figure 8: Exception Handling – Raising an Error
 
-When I tested this code, I provided a 0 and a -1, and received each error that I had specified (Figure 8).
+When I tested this code, I provided a 0 and a -1, and received each error that I had specified (Figure 9).
 Pickling Demo
 ![Exception Error-Raising Error](pictures/exceptionerror-raise.PNG "Exception Error-Raising Error")
-#### Figure 8: Exception Handling – Raising an Error Test
+##### Figure 9: Exception Handling – Raising an Error Test
 
 ### Pickling Demo
 To demonstrate pickling,  I combined code for both writing and reading binary data to/from a file. First, I imported the pickle module, created a dictionary, and filled the dictionary with keys and values. I then used the with keyword with the open() function and passed in a file name and the wb mode for writing binary files. I then specified the binary object name as pickleFile. Once the file was open, I used the pickle.dump() function and passed in the dictionary object and pickle file object. This wrote binary data to the file.
-Next, I used the with keyword and the open() function again, passed in the file name and rb mode for reading binary data, and specified the file object as pickleFile again. Finally, I loaded the data from the file object with pickle.load(), passed in the file object, and printed the data to show that what had been written could now be read (Figure 9).
+Next, I used the with keyword and the open() function again, passed in the file name and rb mode for reading binary data, and specified the file object as pickleFile again. Finally, I loaded the data from the file object with pickle.load(), passed in the file object, and printed the data to show that what had been written could now be read (Figure 10).
 ```
 # ----- Writing to a File:
 import pickle
@@ -190,26 +190,26 @@ with open('dataPick.pkl', 'rb') as pickleFile:  # Opens a file for reading binar
     newData = pickle.load(pickleFile) # Loads data from file object and stores
     print(newData)  # Prints all the loaded data
 ```
-#### Figure 9: Pickling – Writing and Reading Binary Data to a File 
+##### Figure 10: Pickling – Writing and Reading Binary Data to a File 
 
-I tested this demo code in PyCharm and saw that all of my dictionary data displayed (Figure 10).
+I tested this demo code in PyCharm and saw that all of my dictionary data displayed (Figure 11).
 
 ![Pickling-Writing and Reading](pictures/pickling-test.PNG "Pickling-Writing and Reading")
-#### Figure 10: Pickling – Writing and Reading Binary Data to a File Test
+##### Figure 11: Pickling – Writing and Reading Binary Data to a File Test
 
 ## Testing
 When I began creating this program, I completed all coding and testing primarily in the PyCharm IDE, as shown in some of the previous demo sections. To complete this assignment, I also tested in the command terminal.
 
 ### Command Terminal
-I opened a command terminal, changed the directory to my assignment folder, and ran portions of my Assignment07.py script file. I received the desired output here, as well (Figure 11).
+I opened a command terminal, changed the directory to my assignment folder, and ran portions of my Assignment07.py script file. I received the desired output here, as well (Figure 12).
 
 ![Command Testing](pictures/exceptionspickling-command.PNG "Command Testing")
-#### Figure 10: Command Terminal Testing
+##### Figure 12: Command Terminal Testing
 
-Finally, I checked that the text document was saved in my assignment folder (Figure 12).
+Finally, I checked that the text document was saved in my assignment folder (Figure 13).
 ![Pickling File](pictures/pickle-file.PNG "Pickling File")
 
-#### Figure 12: Verifying Data File Exists
+##### Figure 13: Verifying Data File Exists
 
 ## Summary
 After creating the demo code to show how exception handling and pickling work, I reflected on what I had learned. I not only gained experience in how to do my own research on specific topics, but also how to then show examples of how these topics are used. It makes more sense to me now when people say that to learn a subject well you have to teach it to someone else. I will keep this in mind for future projects and continue looking for ways to enhance my ability to learn and apply new concepts.
